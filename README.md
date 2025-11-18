@@ -1,103 +1,38 @@
 📘 E-Diary Web Application
 
-A simple and user-friendly digital diary built using Flask and MySQL, where users can securely register, log in, write personal diary entries, edit them, and delete them.
+The E-Diary is a simple digital diary system that allows users to securely record and manage their personal notes online.
+It replaces traditional handwritten diaries with an easier, faster, and more organized web-based solution.
+Users can create an account, log in, write their daily thoughts, edit past entries, and delete unwanted notes—making it a convenient platform for personal journaling and record-keeping.
 
 🚀 Features
+🔐 User Authentication
 
-✔ User Registration & Login
-✔ Secure session-based authentication
-✔ Add diary entries
-✔ View all personal entries
-✔ Edit existing entries
-✔ Delete entries
-✔ Logout
-✔ MySQL database integration
-✔ Clean, simple UI (HTML + Bootstrap)
+User registration
 
-🛠 Tech Stack
-Component	Technology
-Backend	Python Flask
-Database	MySQL
-Frontend	HTML, CSS (Bootstrap)
-Authentication	Flask Sessions
-📂 Project Structure
-/e-diary
-│
-├── app.py
-├── requirements.txt
-├── /templates
-│     ├── login.html
-│     ├── register.html
-│     ├── view_entries.html
-│     ├── add_entry.html
-│     └── edit_entry.html
-└── /static (optional for CSS/JS)
+Secure login system
 
-🗄️ Database Setup
+Session-based access control
 
-Run this SQL in your MySQL:
+📝 Diary Entry Management
 
-CREATE DATABASE ediary;
+Add new diary entries
 
-USE ediary;
+View all personal entries
 
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) UNIQUE,
-    password VARCHAR(255)
-);
+Edit existing entries
 
-CREATE TABLE entries (
-    entry_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    title VARCHAR(255),
-    content TEXT,
-    entry_date DATE,
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
+Delete entries permanently
 
-⚙️ Install Dependencies
-pip install flask mysql-connector-python werkzeug
+📅 Automatic Date Tracking
 
-▶️ How to Run the Project
+Each entry is saved with the current date
 
-Open terminal in project folder
+💾 Database Storage
 
-Run:
+All user accounts and entries are stored safely in a MySQL database
 
-python app.py
+🧭 Simple & Clean Interface
 
+Easy-to-use design
 
-Open the browser and go to:
-
-http://127.0.0.1:5000
-
-🔐 Security Notes
-
-Use password hashing (generate_password_hash)
-
-Never store plain-text passwords
-
-Avoid hardcoding the database password
-
-📌 Future Improvements (Optional)
-
-Add profile page
-
-Add image/file uploads
-
-Add search option for entries
-
-Dark/Light mode toggle
-
-Export diary as PDF
-
-Add category tags
-
-🤝 Contributing
-
-Feel free to fork this project and improve it!
-
-📜 License
-
-This project is free to use.
+Smooth navigation between pages
